@@ -6,6 +6,16 @@ dist/
 wheels/
 *.egg-info
 
+# large file
+*.sqlite3
+*.csv
+*.xlsx
+*.h5
+*.hdf5
+*.parquet
+*.pkl
+*.joblib
+
 # Virtual environments
 .venv
 pyproject.toml
