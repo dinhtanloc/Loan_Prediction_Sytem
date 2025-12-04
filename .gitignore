@@ -20,6 +20,7 @@ wheels/
 .venv
 pyproject.toml
 uv.lock
+*.yaml
 
 # env files
 .env
