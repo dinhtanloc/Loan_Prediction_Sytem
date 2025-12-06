@@ -1,4 +1,3 @@
-# config/config.py
 import os
 
 import yaml

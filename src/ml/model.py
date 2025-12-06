@@ -1,4 +1,3 @@
-# model.py
 import logging
 import time
 

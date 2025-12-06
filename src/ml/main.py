@@ -1,4 +1,3 @@
-# main.py
 import logging
 
 from api_endpoint import register_routes

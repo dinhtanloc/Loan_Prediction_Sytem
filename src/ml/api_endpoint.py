@@ -1,4 +1,3 @@
-# api_endpoint.py
 import logging
 import time
 from typing import List

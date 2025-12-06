@@ -1,4 +1,3 @@
-# tracing.py
 import logging
 from functools import wraps
 
