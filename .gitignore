@@ -20,6 +20,9 @@ wheels/
 .venv
 pyproject.toml
 uv.lock
+*.yaml
 
+# Incompleted dir
+infra/
 # env files
 .env

@@ -2,7 +2,6 @@ import os
 import shutil
 
 import kagglehub
-
 from path_configs import *
 
 # Download latest version
