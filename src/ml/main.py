@@ -1,10 +1,12 @@
 # main.py
 import logging
+
+from api_endpoint import register_routes
 from fastapi import FastAPI
 
 from ml.utils import lifespan
-from api_endpoint import register_routes
-from .config import PRJ_CFG  
+
+from .config import PRJ_CFG
 
 logging.basicConfig(level=PRJ_CFG.ml_log_level)
 logger = logging.getLogger(__name__)

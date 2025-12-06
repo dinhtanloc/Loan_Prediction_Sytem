@@ -1,14 +1,15 @@
 # api_endpoint.py
-import time
 import logging
-from fastapi import HTTPException
-from fastapi.responses import Response
+import time
 from typing import List
 
-from tracing import tracer
+from fastapi import HTTPException
+from fastapi.responses import Response
 from model import load_model, make_prediction
+from prometheus_client import CONTENT_TYPE_LATEST, Histogram, generate_latest
+from tracing import tracer
+
 from ml.utils import model_request_counter
-from prometheus_client import generate_latest, CONTENT_TYPE_LATEST, Histogram
 
 logger = logging.getLogger(__name__)
 

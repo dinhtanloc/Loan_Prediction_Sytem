@@ -3,11 +3,11 @@ import logging
 from functools import wraps
 
 from opentelemetry import trace
-from opentelemetry.sdk.resources import Resource, SERVICE_NAME
+from opentelemetry.exporter.jaeger.thrift import JaegerExporter
+from opentelemetry.sdk.resources import SERVICE_NAME, Resource
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
-from opentelemetry.exporter.jaeger.thrift import JaegerExporter
-from opentelemetry.trace import set_tracer_provider, get_tracer_provider
+from opentelemetry.trace import get_tracer_provider, set_tracer_provider
 
 from .config import PRJ_CFG
 

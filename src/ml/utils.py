@@ -1,8 +1,8 @@
 import logging
 from contextlib import asynccontextmanager
-from prometheus_client import Counter
 
 from model import load_model
+from prometheus_client import Counter
 
 logger = logging.getLogger(__name__)
 

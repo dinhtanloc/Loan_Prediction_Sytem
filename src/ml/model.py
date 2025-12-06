@@ -1,12 +1,15 @@
 # model.py
-import time
 import logging
-import numpy as np
+import time
+
 import joblib
+import numpy as np
 from fastapi import HTTPException
-from prometheus_client import Histogram, Counter
+from prometheus_client import Counter, Histogram
 from tracing import trace_span
+
 from .config import PRJ_CFG
+
 logger = logging.getLogger(__name__)
 
 # Prometheus metrics
