@@ -35,13 +35,14 @@ ml:
     base_url: "/ml/api/v1"
 
   model:
-    path: "model_ml.joblib"
+    path: "models/model_ml.joblib"
 
   memory:
     directory: "cache/"
 
   monitoring:
-    jaeger_host: "jaeger.monitoring.svc.cluster.local"
+    # jaeger_host: "jaeger.monitoring.svc.cluster.local"
+    jaeger_host: "localhost"
     jaeger_port: 6831
     tracing_enabled: true
 

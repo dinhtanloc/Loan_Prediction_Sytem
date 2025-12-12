@@ -43,8 +43,8 @@ else:
     )
 
     tracer = get_tracer_provider().get_tracer(
-        name=PRJ_CFG.ml_service_name,
-        version=PRJ_CFG.ml_service_version,
+        PRJ_CFG.ml_service_name,
+        PRJ_CFG.ml_service_version,
     )
 
     logger.info(
