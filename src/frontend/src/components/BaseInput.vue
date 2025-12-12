@@ -1,11 +1,21 @@
 <template>
-  <input v-bind="$attrs" v-model="modelValue" @input="$emit('update:modelValue', modelValue)" class="base-input" />
+  <input 
+    v-bind="$attrs"
+    :value="modelValue"
+    @input="onInput"
+    class="base-input"
+  />
 </template>
 
 <script setup>
-defineProps({ modelValue: [String, Number] })
+const props = defineProps({
+  modelValue: [String, Number]
+})
 const emit = defineEmits(['update:modelValue'])
-let modelValue = undefined
+
+function onInput(e) {
+  emit('update:modelValue', e.target.value)
+}
 </script>
 
 <style scoped>
@@ -13,7 +23,5 @@ let modelValue = undefined
   padding: 0.5rem 0.75rem;
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  width: 100%;
-  box-sizing: border-box;
 }
 </style>

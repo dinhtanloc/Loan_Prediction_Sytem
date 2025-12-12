@@ -6,7 +6,24 @@
   </div>
 </template>
 
+<script setup>
+</script>
+
 <style scoped>
-.auth-layout { display:flex; align-items:center; justify-content:center; min-height:100vh; }
-main { width:420px; padding:2rem; background:#fff; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.auth-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
 </style>

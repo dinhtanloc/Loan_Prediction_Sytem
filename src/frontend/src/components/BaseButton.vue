@@ -1,5 +1,7 @@
 <template>
-  <button v-bind="$attrs" class="base-button"><slot /></button>
+  <button v-bind="$attrs" class="base-button">
+    <slot />
+  </button>
 </template>
 
 <script setup>
@@ -11,11 +13,5 @@
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-.base-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
 }
 </style>

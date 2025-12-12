@@ -13,23 +13,11 @@
 <script setup>
 import { computed } from 'vue'
 import { useAuthStore } from '@/store/auth.store'
+
 const store = useAuthStore()
 const isAuth = computed(() => store.isAuthenticated)
+
 function doLogout() {
   store.clear()
 }
 </script>
-
-<style scoped>
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #e5e7eb;
-}
-.brand {
-  font-weight: 700;
-}
-.links > * { margin-left: 0.75rem; }
-</style>

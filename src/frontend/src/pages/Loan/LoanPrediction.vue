@@ -6,7 +6,7 @@
       <BaseInput v-model="form.income" placeholder="Income" />
       <BaseInput v-model="form.loan_amount" placeholder="Loan amount" />
       <BaseInput v-model="form.term" placeholder="Term" />
-      <BaseButton :disabled="loading">Predict</MainLayout>
+  <BaseButton :disabled="loading">Predict</BaseButton>
     </form>
     <div v-if="result">Result: {{ result }}</div>
   </MainLayout>
