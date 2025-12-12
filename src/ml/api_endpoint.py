@@ -4,11 +4,12 @@ from typing import List
 
 from fastapi import HTTPException
 from fastapi.responses import Response
-from model import load_model, make_prediction
 from prometheus_client import CONTENT_TYPE_LATEST, Histogram, generate_latest
-from tracing import tracer
 
-from ml.utils import model_request_counter
+from .tracing import tracer
+from .utils import model_request_counter
+from .model import load_model, make_prediction
+from .schema import PredictionInput
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +23,8 @@ endpoint_histogram = Histogram(
 
 def register_routes(app):
     @app.post("/predict")
-    def predict(features: List[float]):
+    def predict(payload: PredictionInput):
+        features = payload.features
         model_request_counter.labels(endpoint="/predict").inc()
         start = time.time()
 

@@ -5,8 +5,8 @@ import joblib
 import numpy as np
 from fastapi import HTTPException
 from prometheus_client import Counter, Histogram
-from tracing import trace_span
 
+from .tracing import trace_span
 from .config import PRJ_CFG
 
 logger = logging.getLogger(__name__)
