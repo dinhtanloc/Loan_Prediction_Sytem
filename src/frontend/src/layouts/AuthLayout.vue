@@ -18,7 +18,7 @@
   padding: 1rem;
 }
 
-main {
+main {[]
   width: 100%;
   max-width: 420px;
   background: #fff;

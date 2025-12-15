@@ -37,7 +37,7 @@ ENV PYTHONPATH=/app
 # Expose the service port
 EXPOSE 5000
 
-Ư# Default command: run uvicorn pointing to the FastAPI app object.
+# Default command: run uvicorn pointing to the FastAPI app object.
 # The module path used here works if your FastAPI entrypoint is at `src/ml/app.py`
 # and the package root is in PYTHONPATH. We use `ml.app:app` to match package layout in `src/ml`.
 CMD ["uvicorn", "ml.app:app", "--host", "0.0.0.0", "--port", "5000"]
